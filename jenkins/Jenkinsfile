@@ -16,6 +16,11 @@ pipeline {
                 echo "Jenkins Workspace ${env.WORKSPACE}"
             }
         }
+        stage('Deploy') {
+            steps {
+                sh 'make publish'
+            }
+        }
         stage('reports') {
             steps {
                 script {
@@ -27,11 +32,6 @@ pipeline {
                             results          : [[path: 'target/allure-results']]
                     ])
                 }
-            }
-        }
-        stage('Deploy') {
-            steps {
-                sh 'make publish'
             }
         }
     }
