@@ -36,4 +36,7 @@ dependencies {
     compile group: 'org.hamcrest', name: 'hamcrest-core', version: '2.2'
     annotationProcessor 'org.projectlombok:lombok:1.18.12'
     implementation 'com.github.testdevlab:TestUI:master-SNAPSHOT'
+
+    testCompile group: 'io.qameta.allure', name: 'allure-junit4', version: '2.13.2'
+    compile group: 'io.qameta.allure', name: 'allure-java-commons', version: '2.13.2'
 }
