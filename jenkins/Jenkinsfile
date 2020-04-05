@@ -1,7 +1,6 @@
 pipeline {
     tools {
-    // maven 'Maven3'
-    gradle ''
+
     }
   agent any
   stages {
@@ -14,8 +13,7 @@ pipeline {
         echo 'Execute Tests'
         echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
         echo "Jenkins Workspace ${env.WORKSPACE}"
-        bat "mvn clean test -P chrome"
-      }
+       }
     }
     stage('reports') {
     steps {
