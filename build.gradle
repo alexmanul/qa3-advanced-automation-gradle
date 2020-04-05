@@ -40,3 +40,7 @@ dependencies {
     testCompile group: 'io.qameta.allure', name: 'allure-junit4', version: '2.13.2'
     compile group: 'io.qameta.allure', name: 'allure-java-commons', version: '2.13.2'
 }
+
+task generateAllureReport(type: Exec) {
+    commandLine "allure", "generate", "build/allure-results", "--clean", "-o", "allure-report"
+}
