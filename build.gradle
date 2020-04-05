@@ -38,7 +38,6 @@ dependencies {
     implementation 'com.github.testdevlab:TestUI:master-SNAPSHOT'
 
     testCompile group: 'io.qameta.allure', name: 'allure-junit4', version: '2.13.2'
-    compile group: 'io.qameta.allure', name: 'allure-java-commons', version: '2.13.2'
 }
 
 task generateAllureReport(type: Exec) {
