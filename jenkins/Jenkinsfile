@@ -16,11 +16,6 @@ pipeline {
                 echo "Jenkins Workspace ${env.WORKSPACE}"
             }
         }
-        stage('Deploy') {
-            steps {
-                sh 'make publish'
-            }
-        }
         stage('reports') {
             steps {
                 script {
