@@ -1,6 +1,6 @@
 pipeline {
     tools {
-
+    gradle 'Gradle'
     }
   agent any
   stages {
