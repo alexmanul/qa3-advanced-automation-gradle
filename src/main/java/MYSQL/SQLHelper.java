@@ -26,8 +26,7 @@ public class SQLHelper {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
-        return con;
+        return DriverManager.getConnection(URL, USER, PASSWORD);
     }
 
     public Statement createStatement() throws SQLException {

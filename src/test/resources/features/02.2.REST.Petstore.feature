@@ -21,6 +21,7 @@ Feature: QA3 - Advanced Automation. REST. Swagger Petstore
 #  9. Get order with id 10
 #  10. Have 10 minutes free to play around
 
+  @SmokeTest
   Scenario Outline: SWG01. User can get pet information
 	When I get pet information by '<ID>' id
 	And I verify response status code is '200'
@@ -34,6 +35,7 @@ Feature: QA3 - Advanced Automation. REST. Swagger Petstore
 	  | 5  | duck   |
 	  | 3  | doggie |
 
+  @SmokeTest
   Scenario Outline: SWG02. User can create, update and delete pet information
 	When I create pet information with name '<NAME>' and '<ID>' id
 	And I delete pet information by '<ID>' id
