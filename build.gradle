@@ -43,5 +43,5 @@ dependencies {
 }
 
 task generateAllureReport(type: Exec) {
-    commandLine "allure", "generate", "build/allure-results", "--clean", "-o", "allure-report"
+    commandLine "allure", "generate", "/allure-results", "--clean", "-o", "allure-report"
 }
